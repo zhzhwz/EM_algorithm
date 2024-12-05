@@ -286,7 +286,7 @@
     \frametitle{EM 算法图示}
 
     \[\begin{split}
-        L(\Gh) = & \sum_{i = 1}^{n}\ln \E(\frac{p(x_i, z_i, \Gh)}{Q_i(z_i)}) \geq \sum_{i = 1}^{n} \E(\ln \frac{p(x_i, z_i, \Gh)}{Q_i(z_i)}) = J(z, Q)
+        L(\Gh) = & \sum_{i = 1}^{n}\ln \E(\frac{p(x_i, z_i, \Gh)}{Q_i(z_i)}) \geq \sum_{i = 1}^{n} \E(\ln \frac{p(x_i, z_i, \Gh)}{Q_i(z_i)}) = J(Q)
     \end{split}\]
     
     \begin{figure}
@@ -299,9 +299,11 @@
 \begin{frame}
     \frametitle{另一视角：坐标上升法}
 
+    \[J(Q, \Gh) = \sum_{i = 1}^{n}\sum_{z_i}Q_i(z_i)\ln \frac{p(x_i, z_i, \Gh)}{Q_i(z_i)},\quad L(\Gh) = \max_{Q}F(Q, \Gh)\]
+
     \begin{figure}
         \centering
-        \includegraphics[width=.7\textwidth]{res/coordinate_ascent.png}
+        \includegraphics[width=.6\textwidth]{res/coordinate_ascent.png}
     \end{figure}
 
 \end{frame}
